@@ -3,7 +3,7 @@ input[type=text], input[type=button], input[type=email], input[type=password], i
 }
 
 img{
-    width      : 30%;
+    width      : 15%;
     float      : center;
     overflow-x : hidden;
     display    :block;
@@ -19,9 +19,11 @@ h1 {
  
 }
 h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Georgia, serif;
     text-align         : center;
-    color              : #0d0d0e;
+    color              : #636363;
+    font-size          : 16pt;
+    font-weight: 400
  
 }
 
@@ -58,12 +60,91 @@ input[type=button]:hover, input[type=submit]:hover {
     margin-right: auto;
 }
 
+.contenedor2 {
+    width:35vw; height: 70vh; padding:5px; border-radius: 25px; background-color: rgb(238, 238, 238); position: top; top:40vh; left:35vw;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor3 {
+    width:34.98vw; height: 69.98vh; padding:0.1px; border-radius: 20px; background-color: rgb(255, 255, 255); position: top; top:40vh; left:35vw;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .c1 {
     width      : 10%;
     display    : inline;
     float      : left;
     overflow-x : hidden;
 }
+
+.c1A {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #636363;
+    width: 35%;
+    height: 10%;
+    float      : left;
+    margin: 0 0.5em;
+}
+
+.c2A {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #636363;
+    width: 35%;
+    height: 10%;
+    float      : left;
+    margin: 0 0.5em;
+}
+
+.c3A {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #636363;
+    width: 17%;
+    height: 10%;
+    float      : left;
+    text-align: center;
+    
+}
+
+#user {
+    border-radius: 10px;
+    border: 2px solid rgb(171, 170, 172);
+    padding: 8px; 
+    width: 150px;
+    height: 10px;  
+    outline: none;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+}
+
+#email {
+    border-radius: 10px;
+    border: 2px solid rgb(171, 170, 172);
+    padding: 8px; 
+    width: 257px;
+    height: 10px;  
+    outline: none;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+}
+
+#nombre {
+    border-radius: 10px;
+    border: 2px solid rgb(171, 170, 172);
+    padding: 8px; 
+    width: 130px;
+    height: 10px;  
+    outline: none;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+}
+
 
 .c2 {
     width      : 20%;
@@ -88,7 +169,7 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .c5 {
     width      : 50%;
-    display    : inline-;
+    display    : inline;
     float      : left;
     overflow-x : hidden;
 }
@@ -105,7 +186,6 @@ input[type=button]:hover, input[type=submit]:hover {
     display    : inline;
     float      : left;
     overflow-x : hidden;
-    
 }
 
 .c8 {
