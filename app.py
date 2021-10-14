@@ -1,39 +1,43 @@
 from flask import Flask
+from flask import render_template as render
 
 app= Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def inicio():
-    return "Pagina de inicio"
+    return render("home.html")
 
 @app.route("/registro", methods=["GET", "POST"])
 def registro():
-    return "Pagina de registro"
+    return render("registro.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    return "Pagina de login"
+    return render("login.html")
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
-    return "Pagina de dashboard administrativo"
+    return render("dashboard.htmal")
 
-@app.route("/busqueda/<id_usuario>", methods=["GET"])
+@app.route("/perfilusuario", methods=["GET", "POST"])
+def perfilusuario():
+    return render("perfilusuario.html")
+
+
+@app.route("/perfilusuario/<id_usuario>", methods=["GET", "POST"])
 def busqueda_usuario(id_usuario):
-    return f"Estás viendo el perfil de {id_usuario}"
+    return render("busqueda.html")
     
 
 @app.route("/feed", methods=["GET"])
 def feed():
-    return "Pagina del feed"
+    return render("feed.html")
 
-@app.route("/post/<id_post>", methods=["GET", "POST"])
+@app.route("/feed/<id_post>", methods=["GET", "POST"])
 def detalle_post(id_post):
-    return f"Estás viendo el detalle del post {id_post}"
+    return render("detallepost.html")
 
-@app.route("/perfilusuario", methods=["GET", "POST"])
-def perfilusuario():
-    return "Pagina de perfil del usuario"
+
 
 if __name__=="__main__":
     app.run(debug=True)
