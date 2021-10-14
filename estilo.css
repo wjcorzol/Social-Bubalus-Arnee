@@ -36,8 +36,8 @@ input[type=button], input[type=submit] {
     cursor              : pointer;
     display             : inline-block;
     font-family         : 'Open Sans', sans-serif;
-    font-size           : 14px;
-    width               : 200px;
+    font-size           : 18px;
+    width               : 90%;
     height              : 30px;
     text-align          : center !important;
     background          : #262727; 
@@ -63,7 +63,7 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .contenedor {
     width               :400px; 
-    height              :300px; 
+    height              :250px; 
     padding             :25px; 
     border-radius       :10px; 
     background-color    :rgba(219, 219, 219, 0.164); 
@@ -111,7 +111,7 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .c6 {
     width               : 60%;
-    display             : inline-flexbox;
+    display             : inline;
     float               : center;
     overflow-x          : hidden;
 }
@@ -126,6 +126,19 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .c8 {
     width               : 80%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c45 {
+    width               : 45%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+.c075 {
+    width               : 7.5%;
     display             : inline;
     float               : left;
     overflow-x          : hidden;
@@ -153,5 +166,6 @@ input:invalid {
 }
 
 .link {
-    text-align          : center
+    text-align          : center;
+    font-size           : 14px
 }
