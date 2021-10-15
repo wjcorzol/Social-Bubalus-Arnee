@@ -159,18 +159,34 @@ input[type=button]:hover, input[type=submit]:hover {
 
 .c25 {
     width               : 25%;
-    display             : inline;
+    display             : block;
     float               : left;
     overflow-x          : hidden;
     text-align          : center;
-    height              : 90px;
-    border              : 1px;
-    border-color        : #0d0d0e;
+    height              : 120px;
     font-weight         : bold;
+}
+
+.c025 {
+    width               : 2.5%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c05 {
+    width               : 5%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
 }
 
 .fila {
     height              : 10px;
+}
+
+.fila1 {
+    height              : 130px;
 }
 
 .logo_login{
@@ -197,7 +213,11 @@ input:invalid {
 
 .header{
     background-color    : rgb(255, 255, 255);
-    height              :130PX;
+    height              : 130PX;
+    width               : 100%; 
+	left                : 0; 
+	top                 : 0;
+	position            : fixed;
     
 }
 
@@ -238,11 +258,8 @@ input:invalid {
 }
 
 canvas{
-    border-color        : black;
-    background-color    : cyan;
-    border-width        : 1px;
-    border-radius       : 5px;
-    top                 : 50px;
-    left                :30vw;
+    background-color    : rgb(226, 226, 226);
+    width               : 100vw;
+    height              : 500px;
 
 }
