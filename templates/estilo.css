@@ -41,6 +41,12 @@ h2 {
     color               : #0d0d0e;
 }
 
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    text-align          : center;
+    color               : #0d0d0e;
+}
+
 input[type=button], input[type=submit] {
     border-color        : black;
     border-width        : 1px;
@@ -262,4 +268,13 @@ canvas{
     width               : 100vw;
     height              : 500px;
 
+}
+
+table {
+    width :100%;
+    border                : 2px solid black;
+}
+
+td{
+    border-bottom                : 1px solid rgb(195, 195, 195);
 }
