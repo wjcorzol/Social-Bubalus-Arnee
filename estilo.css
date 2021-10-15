@@ -8,6 +8,19 @@ input[type=text], input[type=button], input[type=email], input[type=password], i
     
 }
 
+input[type=search] {
+    width               : 40vw;
+    height              : 30px;
+    border-color        : black;
+    border-width        : 1px;
+    border-radius       : 5px;
+    position            : absolute;
+    top                 : 50px;
+    left                :30vw;
+    border-radius       : 5px;
+
+}
+
 img{
     width               : 30%;
     float               : center;
@@ -145,7 +158,7 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 
 .fila {
-    height              : 30px;
+    height              : 10px;
 }
 
 .logo_login{
@@ -168,4 +181,46 @@ input:invalid {
 .link {
     text-align          : center;
     font-size           : 14px
+}
+
+.header{
+    background-color    : rgb(255, 255, 255);
+    height              :130PX;
+    
+}
+
+.img-header {
+    float               : center;
+    overflow-x          : hidden;
+    display             : block;
+    min-width           : 125px;
+    min-height          : 100px;
+    padding             : 10px;
+}
+
+.foto-perfil{
+    float               : center;
+    overflow-x          : hidden;
+    display             : block;
+    width               : 72px;
+    height              : 60px;
+    padding             : 10px;
+}
+
+.c3-header {
+    width               : 30%;
+    display             : inline;
+    float               : right;
+    overflow-x          : hidden;
+}
+
+.txt_centrado{
+    text-align          : center;
+    margin-left         : auto;
+    margin-right        : auto;
+}
+
+.banda{
+    height              : 100px;
+    padding             : 30px;
 }
