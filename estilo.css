@@ -67,6 +67,24 @@ h2 {
     margin: 0 0.6em;
 }
 
+.contenedor5 {
+    width: 100%; height: 100%; border-radius: 20px;
+}
+
+.contenedor5A {
+    width: 55%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor5B {
+    width: 80%; height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
 .c1 {
     width      : 10%;
     display    : inline;
@@ -178,6 +196,68 @@ h2 {
     text-align: center;
 }
 
+.c8A-1 {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #636363;
+    width: 35%;
+    
+}
+
+.c8A-2 {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+.c8A-2A {
+    width: 35%;
+    padding: 7px;
+    float      : left;
+}
+.c8A-2B {
+    color: #000000;
+    width: 55%;
+    float      : left;
+}
+
+.c8A-2C {
+    color: #000000;
+    width: 35%;
+    padding: 9px;
+    float      : left;
+}
+
+.c8A-2D {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #000000;
+    width: 35%;
+    padding: 9px;
+    margin-top: 77px;
+    text-align: center;
+    float:inline-end;
+}
+
+.c8A-2E {
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #000000;
+    width: 95%;
+    height: 77px;
+    padding: 9px;
+    text-align: left;
+    border-radius: 20px; 
+    border: 2px solid rgb(171, 170, 172);
+}
+
+.c9A {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
 #user {
     border-radius: 10px;
     border: 2px solid rgb(171, 170, 172);
@@ -284,6 +364,41 @@ h2 {
     background          : #3e4141;
 }
 
+#editarperfil {
+    border-radius: 10px;
+    border: 2px solid rgb(171, 170, 172);
+    padding: 8px; 
+    width: 145px;
+    height: 40px;  
+    outline: none;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    background          : #e7ebeb; 
+    cursor              : pointer;
+    display             : inline-block;
+    color               : rgb(0, 0, 0);
+}
+
+#editarperfil:hover {
+    background          : #cbd1d1;
+}
+
+#FigDePerfiles {
+    width: 180px;
+    height: 200px; 
+    margin-bottom: 20px; 
+    border-radius: 20px; 
+    border: 2px solid rgb(171, 170, 172);
+}
+
+#uploads {
+    width: 180px;
+    height: 150px; 
+    margin-bottom: 20px; 
+    border-radius: 20px; 
+    border: 2px solid rgb(171, 170, 172);
+}
+
 label {
     display: block;
     padding-left: 0px;
@@ -293,11 +408,27 @@ label {
     color: #636363;
 }
 
+.Letra {
+    display: inline-block;
+    padding-left: 0px;
+    text-indent: 0px;
+    font-family: Georgia, serif;
+    font-size          : 17pt;
+    color: #636363;
+}
+
+.Letra2 {
+    display: inline-block;
+    padding-left: 0px;
+    text-indent: 0px;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+    color: #000000;
+}
+
 .c2 {
-    width      : 20%;
-    display    : inline;
-    float      : left;
-    overflow-x : hidden;
+    width               : 20%;
+    float               : left;
 }
 
 .c3 {
@@ -305,6 +436,14 @@ label {
     display    : inline;
     float      : left;
     overflow-x : hidden;
+
+}
+
+.c3-header {
+    width               : 30%;
+    float               : right;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
 }
 
 .c4 {
@@ -315,10 +454,7 @@ label {
 }
 
 .c5 {
-    width      : 50%;
-    display    : inline;
-    float      : left;
-    overflow-x : hidden;
+    width               : 50%;
 }
 
 .c6 {
@@ -348,6 +484,48 @@ label {
 
 body {
     font-family  : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    height              : 130PX;
+    width               : 100%; 
+    position            : fixed;
+}
+
+input[type=search] {
+    width               : 35%;
+    height              : 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(171, 170, 172);
+    position            : absolute;
+    top                 : 50px;
+    left                :30vw;
+    outline: none;
+    font-family: Georgia, serif;
+    font-size          : 12pt;
+}
+
+.img-header {
+    min-width           : 125px;
+    min-height          : 100px;
+    padding             : 10px;
+}
+
+.foto-perfil{
+    width               : 62px;
+    height              : 60px;
+    padding             : 10px;
+}
+
+.txt_centrado{
+    text-align          : center;
+    margin-left         : auto;
+    margin-right        : auto;
+    margin-top: auto;
+}
+
+.fila1 {
+    height              : 130px;
 }
 
 input:invalid {
