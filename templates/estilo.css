@@ -157,6 +157,18 @@ input[type=button]:hover, input[type=submit]:hover {
     overflow-x          : hidden;
 }
 
+.c25 {
+    width               : 25%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+    text-align          : center;
+    height              : 90px;
+    border              : 1px;
+    border-color        : #0d0d0e;
+    font-weight         : bold;
+}
+
 .fila {
     height              : 10px;
 }
@@ -223,4 +235,14 @@ input:invalid {
 .banda{
     height              : 100px;
     padding             : 30px;
+}
+
+canvas{
+    border-color        : black;
+    background-color    : cyan;
+    border-width        : 1px;
+    border-radius       : 5px;
+    top                 : 50px;
+    left                :30vw;
+
 }
