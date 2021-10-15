@@ -1,0 +1,226 @@
+input[type=text], input[type=button], input[type=email], input[type=password], input[type=submit] {
+    width               : 100%;
+    height              : 30px;
+    border-color        : black;
+    border-width        : 1px;
+    border-radius       : 5px;
+
+    
+}
+
+input[type=search] {
+    width               : 40vw;
+    height              : 30px;
+    border-color        : black;
+    border-width        : 1px;
+    border-radius       : 5px;
+    position            : absolute;
+    top                 : 50px;
+    left                :30vw;
+    border-radius       : 5px;
+
+}
+
+img{
+    width               : 30%;
+    float               : center;
+    overflow-x          : hidden;
+    display             :block;
+    margin-left         : auto;
+    margin-right        : auto;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align          : center;
+    color               : #0d0d0e;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align          : center;
+    color               : #0d0d0e;
+}
+
+input[type=button], input[type=submit] {
+    border-color        : black;
+    border-width        : 1px;
+    border-radius       : 5px;
+    color               : white;
+    cursor              : pointer;
+    display             : inline-block;
+    font-family         : 'Open Sans', sans-serif;
+    font-size           : 18px;
+    width               : 90%;
+    height              : 30px;
+    text-align          : center !important;
+    background          : #262727; 
+    
+    
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+    background          : #161515;
+    display             : inline
+}
+
+.principal {
+    width               :30vw; 
+    height              : 60vh; 
+    padding             :10px; 
+    border-radius       : 10px; 
+    background-color    : rgb(253, 253, 253); 
+    position            : absolute; 
+    top                 :30vh; 
+    left                :35vw;
+}
+
+.contenedor {
+    width               :400px; 
+    height              :250px; 
+    padding             :25px; 
+    border-radius       :10px; 
+    background-color    :rgba(219, 219, 219, 0.164); 
+    float               :center;
+    margin-left         :auto;
+    margin-right        :auto;
+    box-shadow          :0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.c1 {
+    width               : 10%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c2 {
+    width               : 20%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c3 {
+    width               : 30%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c4 {
+    width               : 40%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c5 {
+    width               : 50%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c6 {
+    width               : 60%;
+    display             : inline;
+    float               : center;
+    overflow-x          : hidden;
+}
+
+.c7 {
+    width               : 70%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+    
+}
+
+.c8 {
+    width               : 80%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.c45 {
+    width               : 45%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+.c075 {
+    width               : 7.5%;
+    display             : inline;
+    float               : left;
+    overflow-x          : hidden;
+}
+
+.fila {
+    height              : 10px;
+}
+
+.logo_login{
+    width               : 20%;
+    float               : center;
+    overflow-x          : hidden;
+    display             :block;
+    margin-left         : auto;
+    margin-right        : auto;
+}
+
+body {
+    font-family  : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:invalid {
+    border              : 1px dashed red;
+}
+
+.link {
+    text-align          : center;
+    font-size           : 14px
+}
+
+.header{
+    background-color    : rgb(255, 255, 255);
+    height              :130PX;
+    
+}
+
+.img-header {
+    float               : center;
+    overflow-x          : hidden;
+    display             : block;
+    min-width           : 125px;
+    min-height          : 100px;
+    padding             : 10px;
+}
+
+.foto-perfil{
+    float               : center;
+    overflow-x          : hidden;
+    display             : block;
+    width               : 72px;
+    height              : 60px;
+    padding             : 10px;
+}
+
+.c3-header {
+    width               : 30%;
+    display             : inline;
+    float               : right;
+    overflow-x          : hidden;
+}
+
+.txt_centrado{
+    text-align          : center;
+    margin-left         : auto;
+    margin-right        : auto;
+}
+
+.banda{
+    height              : 100px;
+    padding             : 30px;
+}
