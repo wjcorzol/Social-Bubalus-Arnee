@@ -17,7 +17,7 @@ def login():
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
-    return render("dashboard.htmal")
+    return render("dashboard.html")
 
 @app.route("/perfilusuario", methods=["GET", "POST"])
 def perfilusuario():
