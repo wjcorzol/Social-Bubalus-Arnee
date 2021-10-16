@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Bubalus Arnee - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilow.css') }}" type="text/css">
+</head>
+<body>
+    <header class='header'>
+        <div>
+
+            <div class='c2'>
+                <a href="/feed">
+                    <img class='img-header' src="static/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
+                </a>
+            </div>
+
+            <div class='c5'>
+                
+                <input type="search" placeholder = "Buscar"/>
+            </div>
+
+            <div class='c3-header'>
+                <div>
+                    <a href="/perfilusuario">
+                        <img class="foto-perfil" src="static/usuario2.png" alt="Usuario">
+                    </a>    
+                </div>
+                <div class='txt_centrado'>
+                    <div><label id=nombreUsuario>Nombre Usuario</label></div>
+                
+                    <div><a href="/configuracion">Configuración</a></div>
+                </div>
+                </div>
+
+        </div>
+        
+    </header>
+    <div class='fila1'> </div>
+    
+    <hr>
+    <div>
+        <div>
+            <h2>Feed</h2>
+        </div>
+        <br>
+
+        <div class='c05'>&nbsp;</div>
+        <div class='c90'>
+            <div>
+                <h3 class="usuarios-feed"><label>Usuario X</label></h3>
+            </div>
+            <div class="caja">
+                <div class='c6'>
+                    <img class="foto-principal" src="static/montana.png">
+                </div>
+                <div class='c4'>
+                    <div><img src="static/montana.png" class='img-secundaria'></div>
+                    <div><img src="static/montana.png" class='img-secundaria'></div>
+                </div>
+            </div>
+            <div class='fila'><br></div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
