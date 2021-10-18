@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Bubalus Arnee - Detalle Post</title>
-    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilow.css') }}" type="text/css">
 </head>
 <body>
     <header class='header'>
         <div>
 
             <div class='c2'>
-                <a href="home.html">
-                    <img class='img-header' src="Imagenes/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
+                <a href="/feed">
+                    <img class='img-header' src="static/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
                 </a>
             </div>
 
@@ -24,8 +24,9 @@
 
             <div class='c3-header'>
                 <div>
-                    <img class="foto-perfil" src="Imagenes/usuario2.png" alt="Usuario">
-                    
+                    <a href="/perfilusuario">
+                        <img class="foto-perfil" src="static/usuario2.png" alt="Usuario">
+                    </a>
                 </div>
                 <div class='txt_centrado'>
                     <div><label id=nombreUsuario>Nombre Usuario</label></div>
@@ -52,7 +53,7 @@
                 <h3>Usuario X</h3>
             </div>
             <div class='caja'>
-                <img src="imagenes/montana.png" alt="Social Bubalus Arnee" class='img-publicacion'>
+                <img src="static/montana.png" alt="Social Bubalus Arnee" class='img-publicacion'>
             </div>
             <div class=".contenedor-descripcion">
                 <h4>Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quibusdam quam. Voluptatibus itaque fugiat nesciunt asperiores, reprehenderit facere laboriosam voluptate esse nostrum quis unde dolore nemo aperiam numquam. Aliquam.</h4>

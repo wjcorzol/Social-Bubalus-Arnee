@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link href="estilo_fabian.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilof.css') }}" type="text/css">
 </head>
 <body>
     <header class='header'>
         <div class='c2'>
-            <a href="home.html">
-                <img class='img-header' src="Imagenes/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
+            <a href="/feed">
+                <img class='img-header' src="static/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
             </a>
         </div>
         <div>
@@ -20,12 +20,14 @@
 
         <div class='c3-header'>
             <div>
-                <img class="foto-perfil" src="Imagenes/usuario2.png" alt="Usuario">
+                <a href="/perfilusuario">
+                    <img class="foto-perfil" src="static/usuario2.png" alt="Usuario">
+                </a>
             </div>
             <div class='txt_centrado'>
-                <div><label id=nombreUsuario>Nombre Usuario</label></div>
+                <div>Nombre de Usuario</div>
             
-                <div><a href="configuracion.html">Configuración</a></div>
+                <div><a href="/configuracion">Configuración</a></div>
             </div>
         </div>
     </header>
@@ -37,7 +39,7 @@
     <div class="contenedor5">
         <div class="contenedor5A">
             <div class="c8A-1">
-                <img src="imagenes/usuario2.png" id="FigDePerfiles">
+                <img src="static/usuario2.png" id="FigDePerfiles">
             </div>
             <div class="c8A-2">
                 <div class="c8A-2A">
@@ -63,36 +65,36 @@
         <div class="contenedor5B">
             <div class="c9A">
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
             </div>
             <div class="c9A">
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
                 <div>
-                    <img src="imagenes/uploads.png" id="uploads">
+                    <img src="static/uploads.png" id="uploads">
                 </div>
             </div>
         </div>
