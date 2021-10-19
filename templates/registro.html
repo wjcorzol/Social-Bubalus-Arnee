@@ -7,14 +7,14 @@
     <title>Registro Social Bubalus Arnees</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilof.css') }}" type="text/css">
     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-   />
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 <body>
     <div class="principal">
-        <img src="static/logo.png"> 
+        <img src="{{ url_for('static', filename='logo.png') }}"> 
         <div class="contenedor">
             <div class="contenedor2">
                 <div>
@@ -91,7 +91,7 @@
 
                     <div class="contenedor4">
                         <div>
-                            <img src="static/usuario2.png" style="width: 150px; height: 182px; margin-bottom: 20px; border-radius: 20px; border: 2px solid; border: 2px solid rgb(171, 170, 172);"> 
+                            <img src="{{ url_for('static', filename='usuario2.png') }}" style="width: 150px; height: 182px; margin-bottom: 20px; border-radius: 20px; border: 2px solid; border: 2px solid rgb(171, 170, 172);"> 
                         </div>
                         <div>
                             <input type="button" name="registrarse" id="registrarse" value = "Seleciona la Foto de Perfil" style="width : 17vw;">
@@ -129,11 +129,11 @@
 
 
 <script>
-  const phoneInputField = document.querySelector("#phone");
-  const phoneInput = window.intlTelInput(phoneInputField, {
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
     utilsScript:
-      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-  });
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
 </script>
 
 

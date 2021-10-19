@@ -13,7 +13,7 @@
 
             <div class='c2'>
                 <a href="/feed">
-                    <img class='img-header' src="static/logo.png" alt="Social Bubalus Arnee"  title = "Inicio">
+                    <img class='img-header' src="{{ url_for('static', filename='logo.png') }}" alt="Social Bubalus Arnee"  title = "Inicio">
                 </a>
             </div>
 
@@ -25,7 +25,7 @@
             <div class='c3-header'>
                 <div>
                     <a href="/perfilusuario">
-                        <img class="foto-perfil" src="static/usuario2.png" alt="Usuario">
+                        <img class="foto-perfil" src="{{ url_for('static', filename='usuario2.png') }}" alt="Usuario">
                     </a>    
                 </div>
                 <div class='txt_centrado'>
@@ -54,11 +54,11 @@
             </div>
             <div class="caja">
                 <div class='c6'>
-                    <img class="foto-principal" src="static/montana.png">
+                    <img class="foto-principal" src="{{ url_for('static', filename='montana.png') }}">
                 </div>
                 <div class='c4'>
-                    <div><img src="static/montana.png" class='img-secundaria'></div>
-                    <div><img src="static/montana.png" class='img-secundaria'></div>
+                    <div><img src="{{ url_for('static', filename='montana.png') }}" class='img-secundaria'></div>
+                    <div><img src="{{ url_for('static', filename='montana.png') }}" class='img-secundaria'></div>
                 </div>
             </div>
             <div class='fila'><br></div>
