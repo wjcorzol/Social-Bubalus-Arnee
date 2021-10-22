@@ -17,7 +17,9 @@ input[type=search] {
     position            : absolute;
     top                 : 50px;
     left                :30vw;
-    border-radius       : 5px;
+    border-radius       : 10px;
+    font-family         :'Roboto Slab';
+    font-size           : 11pt;    
 
 }
 
@@ -326,7 +328,9 @@ input:invalid {
 }
 
 .usuarios-feed{
+    font-family         : 'Roboto Slab';
     text-align          : left;
+    font-size           : 17pt ;
 }
 
 .foto-principal{
