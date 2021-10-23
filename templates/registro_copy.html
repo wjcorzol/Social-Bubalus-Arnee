@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Social Bubalus Arnees</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilow.css') }}" type="text/css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="principal_registro">
+        <img class='logo_registro' src="{{ url_for('static', filename='logo.png') }}"> 
+        <div class="contenedor_registro">
+            <h2>Regístrate para interactuar con tus amigos.</h2>
+            <div class="c05"></div>
+            <div class='c3'>
+                <div class = 'fila'>{{ form.usr(size=40, minlength=8, maxlength=40) }} </div>
+                <div class = 'fila'>{{ form.pnombr }}</div>
+                <div class = 'fila'>{{ form.priapellido }}</div>
+                <div class = 'fila'>Pais</div>
+                <div class = 'fila'>{{ form.fechanac.label }}</div>
+                <div class = 'fila'>{{ form.cla }}</div>
+                <div class = 'fila'></div>
+                <div class = 'fila'>{{ form.btnRegistro }}</div>
+            </div>
+            <div class='c3'>
+                <div class = 'fila'>{{ form.mail }} </div>
+                <div class = 'fila'>{{ form.snombr }}</div>
+                <div class = 'fila'>{{ form.segapellido }}</div>
+                <div class = 'fila'>{{ form.telefono }}</div>
+                <div class = 'fila'>{{ form.fechanac }}</div>
+                <div class = 'fila'></div>{{ form.ver }}</div>
+                <div class = 'fila'></div>
+                <div class = 'fila'>
+                    <a href="/">
+                        <input type="button" name="cancelar" id="cancelar" value = "Cancelar" title = "Iniciar Sesión">
+                    </a>
+                </div>
+            </div>
+            <div class='c3'>
+                
+            </div>
+            <div class="c05"></div>
+                
+                <div class="contenedor2A">
+                    <div class="contenedor3">
+                        <div class='c1A'>
+                            
+                        </div>
+
+                        <div class='c2A'>
+                            
+                        </div>
+
+                        <div class='c1A'>
+                            </div>
+
+                        <div class='c1A'>
+                            </div>
+                        </div>
+
+                        <div class='c3A'>
+                            {{ form.sexo }}</div>
+                        </div>
+
+                        <div class='c1A'>
+                            </div>
+                        </div>
+
+                        <div class='c1A'>
+                            
+                        </div>
+
+                        <div class='c1A'>
+                            
+                            </form>
+                        </div>
+
+                        <div class='c4A'>
+                            
+                        </div>
+
+                        <div class='c5A'>
+                            
+                        </div>
+
+                        <div class='c5A-1'>
+                            
+                        </div>
+                    </div>
+
+                    <div class="contenedor4">
+                        <div>
+                            <img src="{{ url_for('static', filename='usuario2.png') }}" style="width: 150px; height: 182px; margin-bottom: 20px; border-radius: 20px; border: 2px solid; border: 2px solid rgb(171, 170, 172);"> 
+                        </div>
+                        <div>
+                            <input type="button" name="registrarse" id="registrarse" value = "Seleciona la Foto de Perfil" style="width : 17vw;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contenedor2B">
+                    <div class='c6A'>
+                        <div>
+                            <a href="/perfilusuario">
+                                <input type="button" name="registrarse" id="registrarse" value = "Registrarme">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/">
+                                <input type="button" name="cancelar" id="cancelar" value = "Cancelar" title = "Iniciar Sesión">
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class='c7A'>
+                        <label>Al registrarse acepta nuestras condiciones, políticas de datos y cookies. Enviaremos un SMS de verificación.</label>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </div>
+</body>
+
+</body>
+
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
+
+
+</html>
