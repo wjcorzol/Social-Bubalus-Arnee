@@ -1,13 +1,20 @@
-from flask import Flask
+from flask import Flask, request
 from flask import render_template as render
+from formularios import Login
 from markupsafe import escape
 import os
 
 app= Flask(__name__)
 
-@app.route("/", methods=["GET"])
+app.secret_key = os.urandom(24)
+
+@app.route("/", methods=["GET", "POST"])
 def inicio():
-    return render("Login.html")
+    login = Login()
+    if request.method == "GET":
+        return render("login_copy.html")
+    else:
+        return render("login_copy.html")
 
 @app.route("/registro/", methods=["GET", "POST"])
 def registro():
@@ -38,4 +45,4 @@ def feed():
     return render("feed.html")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(port = 5000, debug = True)

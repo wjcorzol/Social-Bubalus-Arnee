@@ -4,7 +4,7 @@ from wtforms.fields.core import RadioField
 from wtforms.validators import InputRequired, EqualTo
 from wtforms.fields.html5 import EmailField, TelField, DateField
 
-class Login(FlaskForm):    # public class Login extends FlaskForm
+class Login(FlaskForm):
     usr = TextField('Usuario *',validators= [InputRequired(message='El campo Usuario es requerido')])
     pwd = PasswordField('Clave *',validators= [InputRequired(message='El campo Clave es requerido')])
     btn = SubmitField('Login')
@@ -22,11 +22,11 @@ class Registro(FlaskForm):
     snombr = TextField('Segundo Nombre')
     priapellido = TextField('Primer Apellido *',validators= [InputRequired(message='El campo Primer Apellido es requerido')])
     segapellido = TextField('Segundo Apellido')
-    sexo = RadioField('Sexo *',validators= [InputRequired(message='El campo Sexo es requerido')])
+    #sexo = RadioField('Sexo *',validators= [InputRequired(message='El campo Sexo es requerido')], choices='M',choices='F', choices ='Otro')
     telefono = TelField('Telefono *',validators= [InputRequired(message='El campo Telefono es requerido')])
     fechanac = DateField('Fecha de Nacimiento *',validators= [InputRequired(message='El campo Fecha de Nacimiento es requerido')])
     cla = PasswordField('Contraseña *',validators= [InputRequired(message='El campo Contraseña es requerido')])
-    ver = PasswordField('Verifica la Contraseña *',validators= [InputRequired(message='El campo Verifica la Contraseña es requerido'), EqualTo(nue,message='La nueva clave y su verificación no coinciden')])
+    ver = PasswordField('Verifica la Contraseña *',validators= [InputRequired(message='El campo Verifica la Contraseña es requerido'), EqualTo(cla,message='La nueva clave y su verificación no coinciden')])
     
     btn = SubmitField('Registrarme')
     btn = SubmitField('Cancelar')
