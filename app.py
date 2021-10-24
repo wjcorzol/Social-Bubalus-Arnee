@@ -1,7 +1,15 @@
-from flask import Flask
-from flask import render_template as render
+from flask import Flask, render_template as render, jsonify, request
+from db import consulta_acc, consulta_sel
 
 app= Flask(__name__)
+
+# sql = "SELECT * FROM habitacion"
+# dat = consulta_sel(sql)
+# if len(dat)==0:
+#   msg = "No se encontraron tales"
+# else:
+#   msg = "Se encontraron tales"
+# return jsonify({"res":msg, "datos":dat})
 
 @app.route("/", methods=["GET"])
 def inicio():
@@ -34,6 +42,16 @@ def busqueda_usuario(id_usuario):
 @app.route("/feed", methods=["GET"])
 def feed():
     return render("feed.html")
+
+@app.route("/prueba")
+def prueba():
+    sql = "SELECT * FROM tabla_usuario"
+    dat = consulta_sel(sql)
+    if len(dat)==0:
+       msg = "No se encontraron tales"
+    else:
+       msg = "Se encontraron tales"
+    return jsonify({"res":msg, "datos":dat})
 
 if __name__=="__main__":
     app.run(debug=True)
