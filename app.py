@@ -1,9 +1,10 @@
-from flask import Flask, request, flash, jsonify
+from flask import Flask, request, flash, redirect, session, send_file
 from flask import render_template as render
 from formularios import Login, Registro
 from markupsafe import escape
 from db import consulta_accion, consulta_selecion
 from werkzeug.security import check_password_hash, generate_password_hash
+from utils import login_valido, pass_valido, email_valido
 import os
 
 app= Flask(__name__)
@@ -26,15 +27,21 @@ def inicio():
 
         if len(password.strip()) == 0:
             flash('Campo Contraseña es requerido')
+        
+        # Preparar la consulta 
+        sql = f"SELECT usuario, password FROM usuario WHERE usuario='{usuario}'"
+        # Ejecutar la consulta
+        res = consulta_selecion(sql)
         #tomar decisiones
-        usuarios = ['willy_corzo','diomedez_diaz', 'deyvis_arrieta']
-        contrasenas = ['123456789','1234567890', '1234567891']
-        if usuario in usuarios and password == contrasenas[usuarios.index(usuario)]:
-            return render("feed.html")# debe redirecionar a la ruta no mostrar el html desde la ruta login
-        else:
-            flash('Usuario o clave invalida')
-            frm = Login()
-            return render('login_copy.html', form = login, titulo = "Inicio de Sesión")
+        if len(res)>0:
+            password_usuario = res[0][1]
+
+            if password_usuario == password:
+                return render("feed.html")# debe redirecionar a la ruta no mostrar el html desde la ruta login
+            else:
+                flash('Usuario o clave invalida')
+                frm = Login()
+                return render('login_copy.html', form = login, titulo = "Inicio de Sesión")
 
 
 @app.route("/registro/", methods=["GET", "POST"])
