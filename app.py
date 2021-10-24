@@ -2,6 +2,8 @@ from flask import Flask, request, flash, jsonify
 from flask import render_template as render
 from formularios import Login, Registro
 from markupsafe import escape
+from db import consulta_accion, consulta_selecion
+from werkzeug.security import check_password_hash, generate_password_hash
 import os
 
 app= Flask(__name__)

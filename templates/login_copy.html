@@ -42,10 +42,12 @@
                         <a href="/registro">
                             <div class='c45'style = float="right"><input type="button" name="registro" id="registo" value = "Registrarse"></div>
                         </a>
-                        
-                        
-                        
                     </div>
+                    
+                    {% for msg in get_flashed_messages() %}
+                    <div class='fila'> {{ msg }}</div>
+                    {% endfor %}
+
                     <div class = 'fila'><br></div>
                 </form>
 
