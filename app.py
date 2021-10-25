@@ -29,14 +29,14 @@ def inicio():
             flash('Campo Contraseña es requerido')
         
         # Preparar la consulta 
-        sql = f"SELECT usuario, password FROM usuario WHERE usuario='{usuario}'"
+        sql = f"SELECT tabla_usuario, password FROM usuario WHERE usuario='{usuario}'"
         # Ejecutar la consulta
         res = consulta_selecion(sql)
         #tomar decisiones
         if len(res)>0:
             password_db = res[0][8]
 
-            if password_db == password:
+            if check_password_hash(password_db,password):
                 return redirect('/feed/')
             else:
                 flash('Usuario o clave invalida')
@@ -51,10 +51,40 @@ def crearUsuario():
     if request.method == 'GET':
         return render("registro_copy.html",form=registro, titulo = 'Registro')
     else:
+        #recuperar información del formulario
+        usuario = escape(request.form['usr']).strip()
+        primerNombre = escape(request.form['pnombr'])
+        primerApellido = escape(request.form['priapellido'])
+        sexo = escape(request.form['sexo'])
+        telefono = escape(request.form['telefono'])
+        password = escape(request.form['cla']).strip()
+        email = escape(request.form['mail'])
+        segundoNombre = escape(request.form['snombr'])
+        segundoApellido = escape(request.form['segapellido'])
+        pais = escape(request.form['pais'])
+        fechaNacimiento = escape(request.form['fechanac'])
+        verificacionClave = escape(request.form['ver']).strip()
+                #Validacion de datos
+        if len(usuario.strip()) == 0:
+            flash('Campo Usuario es requerido')
+
+        if len(password.strip()) == 0:
+            flash('Campo Contraseña es requerido')
         
-        
-        
-        return render("registro_copy.html",form=registro)
+        if password != verificacionClave:
+            flash('Las contraseñas no coinciden')
+
+        # Preparar la consulta 
+        sql = f"INSERT INTO tabla_usuario(usuario, primerNom, segundoNom, primerApe, segundoApe, email, sexo, nacimiento, clave, celular) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        # Ejecutar la consulta
+        password = generate_password_hash(password)
+        res = consulta_accion(sql, (usuario, primerNombre, segundoNombre, primerApellido, segundoNombre, email, sexo, fechaNacimiento, password,  telefono ))
+        # Procesar la respuesta
+        if res!=0:
+            flash('Datos han sido exitosamente grabados')
+        else:
+            flash('Por favor reintente')        
+        return redirect('/feed/')
 
 @app.route("/dashboard/", methods=["GET", "POST"])
 def dashboard():

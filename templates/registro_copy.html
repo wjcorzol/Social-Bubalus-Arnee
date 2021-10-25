@@ -72,14 +72,12 @@
                     <div class = 'fila'>&nbsp;</div>
                     
                 </div>
-        
                 <div class = 'fila'>
                     <div class = 'fila'>&nbsp;</div>
                     <div class = 'fila'>&nbsp;</div>
                     <div class = 'fila'>{{ form.politica}} {{ form.politica.label}}</div>
                     <div class = 'fila'>&nbsp;</div>
                 </div>
-
                 <div class = 'fila'>
                     <div class="c05">&nbsp;</div>
                     <div class = 'c4'>{{ form.btnRegistro }}</div>
@@ -92,6 +90,9 @@
                 </div>
             </form>
         </div>
+        {% for msg in get_flashed_messages() %}
+            <div class='mensaje'> {{ msg }}</div>
+        {% endfor %}
     </div>
 </body>
 

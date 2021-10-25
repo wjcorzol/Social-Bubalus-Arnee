@@ -385,3 +385,10 @@ input:invalid {
     min-height          : 305px;
     background-color    :pink;
 }
+
+.mensaje{
+    display: block;
+    top: 800px;
+    bottom: 30vw;
+    float: center;
+}

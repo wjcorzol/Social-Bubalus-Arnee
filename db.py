@@ -12,12 +12,12 @@ def consulta_selecion(query) -> list:
         sal = None
     return sal
 
-def consulta_accion(query) -> int:
+def consulta_accion(query, datos) -> int:
     try:
 
         with sqlite3.connect(URL_DB) as con:       # Conectarse a la base de datos
             cursor = con.cursor()                  # Crea un área temporal para manejo
-            sal = cursor.execute(query).rowcount   # Ejecutando la consulta y recuperando los resultados
+            sal = cursor.execute(query, datos).rowcount   # Ejecutando la consulta y recuperando los resultados
             if sal!=0:
                 con.commit()                       # Asegura los cambios en la base de datos
     except Exception as ex:
