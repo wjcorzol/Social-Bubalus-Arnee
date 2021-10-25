@@ -1,6 +1,6 @@
 import sqlite3
 
-URL_DB = 'socialbubalus.db'
+URL_DB = 'static/db/socialbubalus.db'
 
 def consulta_selecion(query) -> list:
     try:
@@ -14,7 +14,7 @@ def consulta_selecion(query) -> list:
 
 def consulta_accion(query) -> int:
     try:
-        
+
         with sqlite3.connect(URL_DB) as con:       # Conectarse a la base de datos
             cursor = con.cursor()                  # Crea un área temporal para manejo
             sal = cursor.execute(query).rowcount   # Ejecutando la consulta y recuperando los resultados

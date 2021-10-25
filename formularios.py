@@ -1,8 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import PasswordField, TextField, SubmitField, RadioField
-from wtforms.fields.core import RadioField
+from wtforms.fields.core import RadioField, BooleanField
 from wtforms.validators import InputRequired, EqualTo
 from wtforms.fields.html5 import EmailField, TelField, DateField
+from flask_wtf.file import FileField, FileAllowed
+
 
 class Login(FlaskForm):
     usr = TextField('Usuario *', render_kw={"placeholder": "Usuario"})
@@ -23,11 +25,14 @@ class Registro(FlaskForm):
     snombr = TextField('Segundo Nombre', render_kw={"placeholder": "Segundo Nombre"})
     priapellido = TextField('Primer Apellido', render_kw={"placeholder": "Primer Apellido"},validators= [InputRequired(message='El campo Primer Apellido es requerido')])
     segapellido = TextField('Segundo Apellido', render_kw={"placeholder": "Segundo Apellido"})
-    sexo = RadioField('Sexo',validators= [InputRequired(message='El campo Sexo es requerido')], choices=[('M', 'M'),('F', 'F'),('O', 'Otro')])
+    sexo = RadioField('Sexo',validators= [InputRequired(message='El campo Sexo es requerido')], choices=[('M', 'Masculino'),('F', 'Femenino'),('O', 'Otro')])
     telefono = TelField('Telefono *', render_kw={"placeholder": "Telefono"},validators= [InputRequired(message='El campo Telefono es requerido')])
-    fechanac = DateField('Fecha de Nacimiento',validators= [InputRequired(message='El campo Fecha de Nacimiento es requerido')], format ='%d-%m-%Y')
+    fechanac = DateField('Fecha de Nacimiento' ,validators= [InputRequired(message='El campo Fecha de Nacimiento es requerido')], format ='%d-%m-%Y')
+    pais = TextField('Pais',render_kw={"placeholder": "Pais"} )
     cla = PasswordField('Contraseña *', render_kw={"placeholder": "Contraseña"},validators= [InputRequired(message='El campo Contraseña es requerido')])
     ver = PasswordField('Verifica la Contraseña *', render_kw={"placeholder": "Verifica Contraseña"},validators= [InputRequired(message='El campo Verifica la Contraseña es requerido'), EqualTo(cla,message='La nueva clave y su verificación no coinciden')])
-    
+    politica = BooleanField('Acepta nuestras condiciones, políticas de datos y cookies.', validators = [InputRequired(message='Debes aceptar las politicas para poder realizar el registro')])
+    # politica1 = BooleanField('politica', validators = , choices=(True,'Acepta nuestras condiciones, políticas de datos y cookies.'))
+    fotoper = FileField('image', validators=[FileAllowed(['jpg', 'png'], 'Images only!')]) 
     btnRegistro = SubmitField('Registrarme')
     

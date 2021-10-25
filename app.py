@@ -34,10 +34,10 @@ def inicio():
         res = consulta_selecion(sql)
         #tomar decisiones
         if len(res)>0:
-            password_usuario = res[0][1]
+            password_db = res[0][8]
 
-            if password_usuario == password:
-                return render("feed.html")# debe redirecionar a la ruta no mostrar el html desde la ruta login
+            if password_db == password:
+                return redirect('/feed/')
             else:
                 flash('Usuario o clave invalida')
                 frm = Login()
@@ -48,7 +48,13 @@ def inicio():
 def crearUsuario():
     registro = Registro()
 
-    return render("registro_copy.html",form=registro)
+    if request.method == 'GET':
+        return render("registro_copy.html",form=registro, titulo = 'Registro')
+    else:
+        
+        
+        
+        return render("registro_copy.html",form=registro)
 
 @app.route("/dashboard/", methods=["GET", "POST"])
 def dashboard():
