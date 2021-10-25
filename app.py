@@ -29,12 +29,12 @@ def inicio():
             flash('Campo Contraseña es requerido')
         
         # Preparar la consulta 
-        sql = f"SELECT tabla_usuario, password FROM usuario WHERE usuario='{usuario}'"
+        sql = f"SELECT usuario, clave FROM tabla_usuario WHERE usuario='{usuario}'"
         # Ejecutar la consulta
         res = consulta_selecion(sql)
         #tomar decisiones
-        if len(res)>0:
-            password_db = res[0][8]
+        if len(res)>0:  
+            password_db = res[0][1]
 
             if check_password_hash(password_db,password):
                 return redirect('/feed/')
