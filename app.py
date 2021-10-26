@@ -29,7 +29,7 @@ def inicio():
             flash('Campo Contraseña es requerido')
         
         # Preparar la consulta 
-        sql = f"SELECT usuario, clave FROM tabla_usuario WHERE usuario='{usuario}'"
+        sql = f"SELECT usuario, clave, primerNom, segundoNombre, primerApe, segundoApe, email, sexo, nacimiento, celular FROM tabla_usuario WHERE usuario='{usuario}'"
         # Ejecutar la consulta
         res = consulta_selecion(sql)
         #tomar decisiones
@@ -37,11 +37,27 @@ def inicio():
             password_db = res[0][1]
 
             if check_password_hash(password_db,password):
+                session.clear()
+                session['usr_id'] = usuario
+                session['pwd_id'] = password
+                session['nombre'] = res[0][2]
+                session['segundoNombre'] = res[0][3]
+                session['apellido'] = res[0][4]
+                session['segundoApellido'] = res[0][5]
+                session['email'] = res[0][6]
+                session['sexo'] = res[0][7]
+                session['nacimiento'] = res[0][8]
+                session['celular'] = res[0][9] 
                 return redirect('/feed/')
             else:
                 flash('Usuario o clave invalida')
                 frm = Login()
                 return render('login_copy.html', form = login, titulo = "Inicio de Sesión")
+
+@app.route('/logout/')
+def logout():
+    session.clear()
+    return redirect('/login/')
 
 
 @app.route("/registro/", methods=["GET", "POST"])
