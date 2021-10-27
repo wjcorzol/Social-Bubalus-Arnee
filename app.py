@@ -1,6 +1,6 @@
 from flask import Flask, request, flash, redirect, session, send_file
 from flask import render_template as render
-from formularios import Login, Registro
+from formularios import Login, Registro, Spublicacion
 from markupsafe import escape
 from db import consulta_accion, consulta_selecion
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -122,9 +122,34 @@ def detalle():
 def busqueda_usuario(id_usuario):
     return render("busqueda.html")
 
-@app.route("/feed/", methods=["GET"])
-def feed():
-    return render("feed.html")
+@app.route("/feed/", methods=["GET","POST"])
+def subirpublicacion():
+    publica = Spublicacion()
+    if request.method == 'GET':
+        return render("feed.html",form = publica, titulo = 'Feed')
+    else:
+        #recuperar información del formulario
+        usuario = session['usr_id']
+        fecha = escape(request.form[''])
+        descripcion = escape(request.form['descripcion'])
+        multimedia = escape(request.form['imagen'])
+                #Validacion de datos
+        if len(usuario.strip()) == 0:
+            flash('Campo Usuario es requerido')
+
+        if len(fecha.strip()) == 0:
+            flash('Campo Contraseña es requerido')
+
+        # Preparar la consulta 
+        sql = f"INSERT INTO tabla_publicaciones(usuario, fecha, descripcion, multimedia) VALUES (?, ?, ?, ?)"
+        # Ejecutar la consulta
+        res = consulta_accion(sql, (usuario, fecha, descripcion, multimedia))
+        # Procesar la respuesta
+        if res!=0:
+            flash('Publicacion creada.')
+        else:
+            flash('Por favor reintente')        
+        return redirect('/feed/')
 
 if __name__=="__main__":
     app.run(port = 5000, debug = True)
