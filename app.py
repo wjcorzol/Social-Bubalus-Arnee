@@ -129,8 +129,8 @@ def subirpublicacion():
         return render("feed.html",form = publica, titulo = 'Feed')
     else:
         #recuperar información del formulario
-        idPublicacion = escape(request.form['']).strip()
-        usuario = escape(request.form['usr']).strip()
+        
+        usuario = session['usr_id'] 
         fecha = escape(request.form[''])
         descripcion = escape(request.form['descripcion'])
         multimedia = escape(request.form['imagen'])
@@ -142,9 +142,9 @@ def subirpublicacion():
             flash('Campo Contraseña es requerido')
 
         # Preparar la consulta 
-        sql = f"INSERT INTO tabla_publicaciones(idPublicacion, usuario, fecha, descripcion, multimedia) VALUES (?, ?, ?, ?, ?)"
+        sql = f"INSERT INTO tabla_publicaciones(usuario, fecha, descripcion, multimedia) VALUES (?, ?, ?, ?)"
         # Ejecutar la consulta
-        res = consulta_accion(sql, (idPublicacion, usuario, fecha, descripcion, multimedia))
+        res = consulta_accion(sql, (usuario, fecha, descripcion, multimedia))
         # Procesar la respuesta
         if res!=0:
             flash('Publicacion creada.')
