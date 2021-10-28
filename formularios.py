@@ -36,9 +36,8 @@ class Registro(FlaskForm):
     fotoper = FileField('image', validators=[FileAllowed(['jpg', 'png'], 'Images only!')]) 
     btnRegistro = SubmitField('Registrarme')
 
-    class Spublicacion(FlaskForm):    
-        fecha = DateField('Fecha de Nacimiento' ,validators= [InputRequired(message='El campo Fecha de Nacimiento es requerido')], format ='%d-%m-%Y')
-        descripcion = TextField('Descripcion', render_kw={"placeholder": "Descripcion"})
-        multimeda = FileField('image', validators=[FileAllowed(['jpg', 'png'], 'Images only!')]) 
-        publicar = SubmitField('Publicar')
-        
+class Spublicacion(FlaskForm):    
+    fecha = DateField('Fecha de Nacimiento' ,validators= [InputRequired(message='El campo Fecha de Nacimiento es requerido')], format ='%d-%m-%Y')
+    descripcion = TextField('Descripcion', render_kw={"placeholder": "Descripcion"})
+    multimeda = FileField('image', validators=[FileAllowed(['jpg', 'png'], 'Images only!')]) 
+    publicar = SubmitField('Publicar')

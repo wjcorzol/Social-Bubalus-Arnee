@@ -1,6 +1,7 @@
 from flask import Flask, request, flash, redirect, session, send_file
 from flask import render_template as render
-from formularios import Login, Registro, Spublicacion
+from formularios import Login, Registro
+from formularios import Spublicacion
 from markupsafe import escape
 from db import consulta_accion, consulta_selecion
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -33,12 +34,13 @@ def inicio():
         # Ejecutar la consulta
         res = consulta_selecion(sql)
         #tomar decisiones
+        
         if len(res)>0:  
             password_db = res[0][1]
 
             if check_password_hash(password_db,password):
                 session.clear()
-                session['usr_id'] = usuario
+                session['usr_id'] = res[0][0]
                 session['pwd_id'] = password
                 session['nombre'] = res[0][2]
                 session['segundoNombre'] = res[0][3]
